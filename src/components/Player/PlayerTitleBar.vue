@@ -8,7 +8,7 @@
       </template>
 
       <v-list>
-        <v-list-item @click="dialog = true">
+        <v-list-item @click.stop="dialog = true">
           <v-list-item-title>About</v-list-item-title>
         </v-list-item>
       </v-list>
@@ -34,17 +34,11 @@
   </v-system-bar>
 </template>
 
-
 <script>
 export default {
   data: () => ({
     dialog: false
-  }),
-  methods: {
-    method() {
-      // Perform an action
-    }
-  }
+  })
 };
 </script>
 
